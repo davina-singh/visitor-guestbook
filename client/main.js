@@ -1,5 +1,5 @@
 // const API_URL =process.env.API_URL || "http://localhost:3000/messages";
-const API_URL = "https://biggerstack-server.onrender.com/messages";
+const API_URL = "http://localhost:5174/messages";
 
 async function showMessages(filter = "all") {
   const response = await fetch(`${API_URL}?filter=${filter}`);
