@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinyStack</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="client.js" defer></script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>Leave a message</h1>
+    <form id="theForm">
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Your username" required>
+      <label for="content">Your message</label>
+      <textarea name="content" id="content" placeholder="Your message" required></textarea>
+
+      <fieldset class="reactions">
+        <input type="radio" id="smile" name="reaction" value="😀" checked>
+        <label for="smile">😀</label>
+        <input type="radio" id="sad" name="reaction" value="😢">
+        <label for="sad">😢</label>
+        <input type="radio" id="angry" name="reaction" value="😡">
+        <label for="angry">😡</label>
+        <input type="radio" id="love" name="reaction" value="😍">
+        <label for="love">😍</label>
+      </fieldset>
+
+      <input type="submit" value="Send">
+    </form>
+  </div>
+
+  <header class="messages-header">
+    <div id="message-count"></div>
+    <form id="filter-form">
+      <select name="filter" id="filter">
+        <option value="all">All</option>
+        <option value="😀">😀</option>
+        <option value="😢">😢</option>
+        <option value="😡">😡</option>
+        <option value="😍">😍</option>
+      </select>
+      <button id="filter-button">Filter</button>
+    </form>
+  </header>
+
+
+  <ul id="message-list"></ul>
+</body>
+
+</html>
