@@ -1,5 +1,6 @@
 {
   "dependencies": {
     "better-sqlite3": "^9.4.0"
-  }
+  },
+  "type": "module"
 }
