@@ -1,10 +1,12 @@
 import express from "express";
 import Database from "better-sqlite3";
 import cors from "cors";
+import dotenv from "dotenv"
 
+dotenv.config()
 const app = express();
 const db = new Database("bigger.db");
-
+const PORT = 5174
 app.use(cors());
 app.use(express.json());
 
@@ -30,6 +32,6 @@ app.post("/messages", function (req, res) {
   res.json({ success: true });
 });
 
-app.listen(3000, () => {
-  console.log(`Server started on http://localhost:5174`);
+app.listen(PORT, () => {
+  console.log(`Server started on PORT ${PORT}`);
 });
