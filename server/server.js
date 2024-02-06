@@ -6,7 +6,7 @@ import dotenv from "dotenv"
 dotenv.config()
 const app = express();
 const db = new Database("bigger.db");
-const PORT = 5174
+const PORT = '5174'
 app.use(cors());
 app.use(express.json());
 
