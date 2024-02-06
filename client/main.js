@@ -1,5 +1,5 @@
 // const API_URL =process.env.API_URL || "http://localhost:3000/messages";
-const API_URL = import.meta.env.VITE_ServerURL;
+const API_URL = import.meta.env.VITE_Server;
 
 async function showMessages(filter = "all") {
   const response = await fetch(`${API_URL}?filter=${filter}`);
